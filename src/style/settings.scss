@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 20px 0;
+
+    .lien {
+        text-decoration: none;
+        color: black;
+        margin: 0 10px;
+        color: white;
+        background: rgb(45, 182, 206);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: solid 2px rgb(45, 182, 206);
+
+        &:hover {
+            color: rgb(45, 182, 206);
+            background: white;
+
+        }
+    }
+}
+
+h1 {
+    color: blue;
+}
+
+.add {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    background: rgb(239, 70, 70);
+    font-size: 30px;
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    @include centerChild;
+    color: white;
+    box-shadow: 0 0 25px -8px black;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(239, 70, 70);
+        background: white;
+    }
+}
+
+.type {
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    @include centerChild;
+}
+
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+    justify-content: center;
+    gap: 20px;
+    border: solid 5px rgb(113, 216, 113);
+
+    li {
+        width: 300px;
+        box-shadow: 0 0 10px -3px black;
+        padding: 10px;
+
+        .change {
+            margin: 0 auto;
+            @include centerChild;
+            flex-direction: column;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-content: space-between;
+            padding-top: 10px;
+
+            img {
+                width: 100%;
+            }
+
+            .infos {
+
+                h2 {
+                    font-size: 1.2rem;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    margin-top: 10px;
+                }
+
+                .date {
+                    margin-top: 10px;
+                    text-align: left
+                }
+            }
+        }
+
+        .color {
+            @include centerChild;
+        }
+
+        .voir-details {
+            margin-top: 10px;
+            border: none;
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 2px;
+            font-size: 17px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: solid 1px black;
+            transition: 0.4s;
+
+            &:hover {
+                color: black;
+                background: white;
+                scale: 0.9;
+            }
+        }
+    }
+}
+
+.chargement {
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 50%;
+    border: 10px solid #2c2c2c;
+    border-top: 10px solid #00ffcc;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc;
+    animation: move 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes move {
+    100% {
+        rotate: 360deg;
+    }
+}
