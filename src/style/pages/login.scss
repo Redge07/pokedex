@@ -1,0 +1,64 @@
+form {
+    margin: 0 auto;
+    width: 500px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "u m"
+        "v v"
+        "i i";
+    background: rgb(45, 182, 206);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+
+    input {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+
+        &:focus {
+            border-radius: 30px;
+            box-shadow: 0 0 10px 0 white;
+        }
+    }
+
+    & input:nth-child(1) {
+        grid-area: u;
+    }
+
+    & input:nth-child(2) {
+        grid-area: m;
+    }
+
+    button {
+        grid-area: v;
+        width: 200px;
+        margin: 0 auto;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgb(45, 182, 206);
+        font-weight: bold;
+        transition: 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            scale: 0.9;
+            background: rgb(45, 182, 206);
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    p {
+        grid-area: i;
+        color: white;
+    }
+}
